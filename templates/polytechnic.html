@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edubot - Polytechnic Educational Services</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+
+/* --- Polytechnic Page Specific Icon Styling --- */
+
+body#polytechnic-page .fas,
+
+body#polytechnic-page .fa { /* Targeting both fas and fa classes */
+
+font-size: 1.5em; /* Adjust the size as needed (e.g., 1.5em, 2em, etc.) */
+
+color: white; /* Set icon color to white */
+
+}
+
+/* --- End Polytechnic Page Specific Icon Styling --- */
+
+</style>
+
+</head>
+
+<body id="polytechnic-page"> <!- **Added body ID: polytechnic-page** -->
+
+<div class="container">
+
+<header>
+
+<div class="header-content">
+
+<h1><i class="fas fa-graduation-cap"></i> Edubot - Polytechnic Services</h1>
+
+<p id="tagline">Dedicated Educational Support for Polytechnic Students</p>
+
+</div>
+
+</header>
+
+
+
+<nav>
+
+<ul>
+
+<li><a href="{{ url_for('homepage') }}">Home</a></li>
+
+<li><a href="{{ url_for('communication_page') }}">Communication Skills</a></li>
+
+<li><a href="{{ url_for('placement_page') }}">Placement Training</a></li>
+
+<li><a href="{{ url_for('value_added_page') }}">Value Added Courses</a></li>
+
+<li><a href="{{ url_for('social_awareness_page') }}">Social Awareness</a></li>
+
+<li><a href="{{ url_for('resume_page') }}">Resume Creation</a></li>
+
+<li><a href="{{ url_for('problem_solving_page') }}">Problem Solving</a></li>
+
+<li><a href="{{ url_for('paper_workshop_page') }}">Paper & Workshop Skills</a></li>
+
+</ul>
+
+</nav>
+
+
+
+<section id="polytechnic-services-section">
+
+<h2 class="services-heading">Polytechnic Student - Explore Specific Services</h2>
+
+<p id="polytechnic-intro-text">Welcome to Edubot's Polytechnic Services section! Here, you'll find resources tailored to support your Polytechnic education. Explore the services below to enhance your skills and career prospects as a Polytechnic student.</p>
+
+
+
+<div class="services-grid">
+
+<a href="{{ url_for('communication_page') }}" class="service-card"> <i class="fas fa-comments"></i>
+<h3>Communication</h3>
+<p>Enhance your communication abilities for polytechnic studies.</p>
+</a>
+
+<a href="{{ url_for('technical_page') }}" class="service-card">
+<i class="fas fa-wrench"></i>
+<h3>Technical</h3>
+<p>Develop essential technical skills for your field.</p>
+</a>
+
+<a href="{{ url_for('certification_page') }}" class="service-card">
+<i class="fas fa-certificate"></i>
+<h3>Certification</h3>
+<p>Explore industry-recognized certification programs.</p>
+</a>
+
+<a href="{{ url_for('internship_page') }}" class="service-card">
+<i class="fas fa-user-tie"></i>
+<h3>Internship</h3>
+<p>Find opportunities for valuable practical experience.</p>
+</a>
+
+<a href="{{ url_for('higher_education_page') }}" class="service-card">
+<i class="fas fa-university"></i>
+<h3>Higher Education</h3>
+<p>Guidance for pursuing further studies after polytechnic.</p>
+</a>
+
+<a href="{{ url_for('employment_page') }}" class="service-card">
+<i class="fas fa-briefcase"></i>
+<h3>Employment</h3>
+<p>Resources to help you find suitable employment opportunities.</p>
+</a>
+
+</div>
+
+</section>
+
+
+
+<section id="general-chat-polytechnic"> <!- Unique ID for polytechnic chat section -->
+
+<div class="service-card general-chat">
+
+<i class="fas fa-robot"></i>
+
+<h3>Polytechnic General Chat</h3> <!- Modified title for Polytechnic chat -->
+
+<p>General educational assistance for Polytechnic students.</p>
+
+<div class="language-selector"> <label for="polytechnic-home-language-select">Language:</label>
+
+<select id="polytechnic-home-language-select" class="language-select" onchange="setLanguage('polytechnic-home', this.value)">
+
+<option value="en" selected>English</option>
+
+<option value="ta">Tamil</option>
+
+<option value="hin">Hindi</option>
+
+<option value="mal">Malayalam</option>
+
+<option value="tel">Telugu</option>
+
+
+
+</select>
+
+</div>
+
+<div class="chat-container" id="polytechnic-home-chat-container">
+
+<div class="chat-history" id="polytechnic-home-chat-history">
+
+<div class="bot-message">
+
+<p>Hello Polytechnic Student! I'm Edubot, your dedicated assistant. How can I support your Polytechnic studies today?</p> <!- Modified greeting -->
+
+</div>
+
+</div>
+
+<div class="chat-input-area">
+
+<input type="text" id="polytechnic-home-user-input" placeholder="Type your question here">
+
+<button onclick="sendMessage('polytechnic-home')"><i class="fas fa-paper-plane"></i> Send</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<footer>
+
+<p>&copy; 2025 LEARNMATE. All rights reserved.</p>
+
+</footer>
+
+</div>
+
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+<script>
+
+// --- Reusing the same script.js, no changes needed in this file ---
+
+// --- The redirection logic is already in index.html's script ---
+
+</script>
+
+</body>
+
+</html>
