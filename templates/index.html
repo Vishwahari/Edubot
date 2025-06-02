@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edubot - Your Educational Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-graduation-cap"></i> Edubot</h1>
+                <p id="tagline">Your Personalized Educational Assistant for Polytechnic and Engineering Students</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('communication_page') }}">Communication Skills</a></li>
+                <li><a href="{{ url_for('placement_page') }}">Placement Training</a></li>
+                <li><a href="{{ url_for('value_added_page') }}">Value Added Courses</a></li>
+                <li><a href="{{ url_for('social_awareness_page') }}">Social Awareness</a></li>
+                <li><a href="{{ url_for('resume_page') }}">Resume Creation</a></li>
+                <li><a href="{{ url_for('problem_solving_page') }}">Problem Solving</a></li>
+                <li><a href="{{ url_for('paper_workshop_page') }}">Paper & Workshop Skills</a></li>
+            </ul>
+        </nav>
+
+        <section id="student-type-selector">
+            <h2>I am a:</h2>
+            <div class="student-type-options">
+                <label><input type="radio" id="polytechnic" name="studentType" value="polytechnic" > Polytechnic Student</label> <!- **Polytechnic FIRST in HTML order** -->
+                <label><input type="radio" id="engineering" name="studentType" value="engineering" checked> Engineering Student</label> <!- **Engineering CHECKED by default** -->
+            </div>
+            <p id="intro-text">Welcome to Edubot! We are here to support your educational journey with resources and assistance in key areas.</p>
+        </section>
+
+        <section id="services">
+            <h2 class="services-heading">Explore Our Services</h2>
+            <div class="services-grid">
+                <a href="{{ url_for('communication_page') }}" class="service-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Communication Skills</h3>
+                    <p>Enhance your communication abilities.</p>
+                </a>
+                <a href="{{ url_for('placement_page') }}" class="service-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Placement Training</h3>
+                    <p>Prepare for placements effectively.</p>
+                </a>
+                <a href="{{ url_for('value_added_page') }}" class="service-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Value Added Courses</h3>
+                    <p>Boost your skills and marketability.</p>
+                </a>
+                <a href="{{ url_for('social_awareness_page') }}" class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Social Awareness</h3>
+                    <p>Understand your role and ethics.</p>
+                </a>
+                <a href="{{ url_for('resume_page') }}" class="service-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Resume Creation</h3>
+                    <p>Build a winning resume.</p>
+                </a>
+                <a href="{{ url_for('problem_solving_page') }}" class="service-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Problem Solving Skills</h3>
+                    <p>Sharpen your problem-solving abilities.</p>
+                </a>
+                <a href="{{ url_for('paper_workshop_page') }}" class="service-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Paper & Workshop Skills</h3>
+                    <p>Master paper & workshop skills.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="general-chat-home">
+            <div class="service-card general-chat">
+                <i class="fas fa-robot"></i>
+                <h3>General Chat</h3>
+                <p>General educational assistance.</p>
+                <div class="language-selector">  <label for="home-language-select">Language:</label>
+                    <select id="home-language-select" class="language-select" onchange="setLanguage('home', this.value)">
+                        <option value="en" selected>English</option>
+                        <option value="ta">Tamil</option>
+                        <option value="hin">Hindi</option>
+                        
+                        <option value="mal">Malayalam</option>
+                        <option value="tel">Telugu</option>
+                        
+                    </select>
+                </div>
+                <div class="chat-container" id="home-chat-container">
+                    <div class="chat-history" id="home-chat-history">
+                        <div class="bot-message">
+                            <p>Hello! I'm Edubot, your educational assistant. How can I help you today?</p>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="home-user-input" placeholder="Type your question here">
+                        <button onclick="sendMessage('home')"><i class="fas fa-paper-plane"></i> Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <p>&copy; 2025 LEARNMATE. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const studentTypeRadios = document.querySelectorAll('input[name="studentType"]');
+            const introTextElement = document.getElementById('intro-text');
+            const taglineElement = document.getElementById('tagline');
+
+            function updateHomePageContent(studentType) {
+                if (studentType === 'polytechnic') {
+                    taglineElement.textContent = "Your Personalized Educational Assistant for Polytechnic Students";
+                    introTextElement.textContent = "Welcome, Polytechnic Student! Edubot is tailored to support your diploma studies. Explore resources and assistance designed for Polytechnic education.";
+                } else if (studentType === 'engineering') {
+                    taglineElement.textContent = "Your Personalized Educational Assistant for Engineering Students";
+                    introTextElement.textContent = "Welcome, Engineering Student! Edubot is here to guide you through your engineering degree. Discover resources and support to excel in your engineering studies.";
+                } else {
+                    taglineElement.textContent = "Your Personalized Educational Assistant for Polytechnic and Engineering Students";
+                    introTextElement.textContent = "Welcome to Edubot! We are here to support your educational journey with resources and assistance in key areas."; // Default text
+                }
+            }
+
+            studentTypeRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    updateHomePageContent(this.value);
+
+                    // --- **NEW REDIRECT LOGIC HERE - INSIDE RADIO CHANGE EVENT** ---
+                    const selectedStream = this.value; // 'this' refers to the radio button that changed
+
+                    if (selectedStream === 'polytechnic') {
+                        window.location.href = "{{ url_for('polytechnic_page') }}"; // Redirect to Polytechnic page
+                    } else {
+                        // If 'engineering' is selected (or re-selected), stay on index page (or reload if you want: window.location.reload();)
+                        console.log("Engineering selected - staying on index page."); // Optional log
+                    }
+                    // --- **END OF NEW REDIRECT LOGIC** ---
+                });
+            });
+
+            // Initialize content based on default selection (Engineering now initially checked in HTML)
+            updateHomePageContent(document.querySelector('input[name="studentType"]:checked').value);
+
+
+        });
+    </script>
+</body>
+</html>
