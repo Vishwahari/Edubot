@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Added Courses - Edubot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-certificate"></i> Value Added Courses</h1>
+                <p id="tagline">Enhance your skills with our value-added courses.</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('communication_page') }}">Communication Skills</a></li>
+                <li><a href="{{ url_for('placement_page') }}">Placement Training</a></li>
+                <li><a href="{{ url_for('value_added_page') }}" class="active">Value Added Courses</a></li>
+                <li><a href="{{ url_for('social_awareness_page') }}">Social Awareness</a></li>
+                <li><a href="{{ url_for('resume_page') }}">Resume Creation</a></li>
+                <li><a href="{{ url_for('problem_solving_page') }}">Problem Solving</a></li>
+                <li><a href="{{ url_for('paper_workshop_page') }}">Paper & Workshop Skills</a></li>
+            </ul>
+        </nav>
+
+        <section id="service-hero" class="value_added-hero"> <div class="hero-content">
+            <h2>Boost Your Skills with Value Added Courses</h2>
+            <p>Explore a range of value-added courses to make you more competitive and skilled.</p>
+        </div> </section>
+
+        <main>
+            <section id="value-added-courses-content">
+                <h2>Discover Our Value Added Courses</h2>
+                <p>Find courses in emerging technologies, professional skills, and more to enhance your resume and career prospects.</p>
+                </section>
+
+            <section class="practice-links">
+                <h3>Course Resources</h3>
+                <ul>
+                
+                    <li><a href="https://www.coursera.org/specializations/c-programming#courses">Coursera (Free course about C programming with certification available)</a></li>
+                    <li><a href="https://www.coursera.org/specializations/hands-on-cpp">Coursera (Free course about hands-on C programming practice with certification available)</a></li>
+                    <li><a href="https://www.coursera.org/learn/python">Coursera (Free course about Python programming with certification available)</a></li>
+                    <li><a href="https://www.mygreatlearning.com/academy">My Great Learning (Free courses with certification available)</a></li>
+                    <li><a href="https://www.guvi.in/courses/?current_tab=myCourses">Guvi (Free courses with certification available)</a></li>
+                    <li><a href="https://infyspringboard.onwingspan.com/web/en/page/home">Infosys Springboard (Free courses with certification available)</a></li>
+                    <li><a href="https://www.mindluster.com/">Mindluster (Free courses with certification available)</a></li>
+                    <li><a href="https://www.guvi.in/zen-class/mechanical-cad-course/?utm_source=Google-Search&utm_medium=Mech-CAD-TN-State-Nov-High-Intent&utm_campaign=Mech-CAD-TN-State-Nov=Ad1&utm_content=Mech-CAD-TN-State-Nov&network=g&device=c&keyword=autocad%20online%20course&campaignid=21878808180&creative=720318647914&matchtype=p&adposition=&placement=&adgroup=171086857338&targetid=kwd-297640540535&location=9050514&gad_source=1&gclid=CjwKCAjwvr--BhB5EiwAd5YbXmy5YEtomlLYvAgGwMuRdAISW2LQeNAkpxJAAThj_45gyWI4637xlxoChRYQAvD_BwE">Mechanical Engineering AutoCAD</a></li>
+                    <li><a href="https://alison.com/courses?query=Piping%20Design%20and%20Manufacturing">Piping Design and Manufacturing</a></li>
+                    <li><a href="https://www.classcentral.com/course/begin-robotics3410">Robotics (Course 1)</a></li>
+                    <li><a href="https://www.classcentral.com/course/begin-robotics-3410">Robotics (Course 2)</a></li>
+                    <li><a href="https://www.classcentral.com/search?q=robotics">Robotics (General Search)</a></li>
+                    <li><a href="https://alison.com/courses?query=Tool%20Design">Tool Design</a></li>
+                    <li><a href="https://www.classcentral.com/search?q=mechatronics">Mechatronics</a></li>
+                    <li><a href="https://www.coursera.org/courses?query=nanotechnology">Nanotechnology Engineering</a></li>
+                    <li><a href="https://www.coursera.org/courses?query=business%20administration">Business Administration (MBA)</a></li>
+                    <li><a href="https://www.coursera.org/search?query=Autodesk%20Revit">Civil Engineering Autodesk Revit</a></li>
+                    <li><a href="https://www.guvi.in/zen-class/mechanical-cad-course/?utm_source=Google-Search&utm_medium=Mech-CAD-TN-State-Nov-High-Intent&utm_campaign=Mech-CAD-TN-State-Nov=Ad1&utm_content=Mech-CAD-TN-State-Nov&network=g&device=c&keyword=autocad%20online%20course&campaignid=21878808180&creative=720318647914&matchtype=p&adposition=&placement=&adgroup=171086857338&targetid=kwd-297640540535&location=9050514&gad_source=1&gclid=CjwKCAjwvr--BhB5EiwAd5YbXmy5YEtomlLYvAgGwMuRdAISW2LQeNAkpxJAAThj_45gyWI4637xlxoChRYQAvD_BwE">Civil Engineering AutoCAD</a></li>
+                    <li><a href="https://www.coursera.org/search?query=Oracle%20Primavera">Oracle Primavera</a></li>
+                    <li><a href="https://www.coursera.org/courses?query=civil%203d">Autodesk Civil 3D</a></li>
+                </ul>
+            </section>
+
+            <section id="value_added-chat-section">  <h2>Value Added Courses Chatbot</h2>
+                <div class="chat-container" id="value_added-chat-container">  <div class="language-selector">
+                        <label for="value_added-language-select">Language:</label>
+                        <select id="value_added-language-select" class="language-select" onchange="setLanguage('value_added', this.value)">
+                            <option value="en" selected>English</option>
+                            <option value="ta">Tamil</option>
+                            <option value="hin">Hindi</option>
+                            <option value="mal">Malayalam</option>
+                            <option value="tel">Telugu</option>
+                        </select>
+                    </div>
+                    <div class="chat-history" id="value_added-chat-history">
+                        <div class="bot-message">
+                            <p>Hello! I am Edubot, your Value Added Courses assistant. Ask me about our courses!</p>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="value_added-user-input" placeholder="Type your question here">
+                        <button id="value_added-send-button" onclick="sendMessage('value_added')"><i class="fas fa-paper-plane"></i> Send</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Edubot. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

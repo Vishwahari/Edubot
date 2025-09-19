@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving Skills - Edubot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-lightbulb"></i> Problem Solving Skills</h1>
+                <p id="tagline">Sharpen your problem-solving abilities with Edubot.</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('communication_page') }}">Communication Skills</a></li>
+                <li><a href="{{ url_for('placement_page') }}">Placement Training</a></li>
+                <li><a href="{{ url_for('value_added_page') }}">Value Added Courses</a></li>
+                <li><a href="{{ url_for('social_awareness_page') }}">Social Awareness</a></li>
+                <li><a href="{{ url_for('resume_page') }}">Resume Creation</a></li>
+                <li><a href="{{ url_for('problem_solving_page') }}" class="active">Problem Solving</a></li>
+                <li><a href="{{ url_for('paper_workshop_page') }}">Paper & Workshop Skills</a></li>
+            </ul>
+        </nav>
+
+        <section id="service-hero" class="problem_solving-hero"> <div class="hero-content">
+            <h2>Enhance Your Problem Solving Prowess</h2>
+            <p>Develop essential critical thinking and problem-solving skills for academic and career success.</p>
+        </div> </section>
+
+        <main>
+            <section id="problem-solving-content">
+                <h2>Resources for Problem Solving</h2>
+                <p>Access materials and exercises to improve your analytical and problem-solving capabilities.</p>
+                </section>
+
+            <section class="practice-links">
+                <h3>Practice Challenges</h3>
+                <ul>
+                    <li><a href="https://www.codechef.com/ ">Codechef (Hands on practice with some programming languages)</a></li>
+                    <li><a href="https://www.guvi.in/code-kata/">Guvi (Hands on practice with some programming languages)</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/my-journey-of-learning-problem-solving-skills-through-coding-contests/?ref=gcse_ind ">GeeksforGeeks (free learning about problem solving skills through coding)</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/problem-solving-in-artificial-intelligence/?ref=gcse_ind">GeeksforGeeks (Free learning about problem-solving skills in AI)</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/puzzles/?ref=gcse_ind">GeeksforGeeks (Free learning about puzzles)</a></li>
+                    <li><a href="https://leetcode.com/">LeetCode (Hands-on practice with some programming languages)</a></li>
+                    <li><a href="https://www.hackerrank.com/">HackerRank (Hands-on practice with some programming languages)</a></li>
+                    
+
+                </ul>
+            </section>
+
+            <section id="problem_solving-chat-section">  <h2>Problem Solving Skills Chatbot</h2>
+                <div class="chat-container" id="problem_solving-chat-container">  <div class="language-selector">
+                        <label for="problem_solving-language-select">Language:</label>
+                        <select id="problem_solving-language-select" class="language-select" onchange="setLanguage('problem_solving', this.value)">
+                            <option value="en" selected>English</option>
+                            <option value="ta">Tamil</option>
+                            <option value="hin">Hindi</option>
+                            <option value="mal">Malayalam</option>
+                            <option value="tel">Telugu</option>
+                        </select>
+                    </div>
+                    <div class="chat-history" id="problem_solving-chat-history">
+                        <div class="bot-message">
+                            <p>Hello! I am Edubot, your Problem Solving Skills assistant. Let's tackle some problems together!</p>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="problem_solving-user-input" placeholder="Type your question here">
+                        <button id="problem_solving-send-button" onclick="sendMessage('problem_solving')"><i class="fas fa-paper-plane"></i> Send</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Edubot. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

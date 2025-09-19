@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Creation - Edubot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-file-alt"></i> Resume Creation</h1>
+                <p id="tagline">Craft a professional resume with Edubot's help.</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('communication_page') }}">Communication Skills</a></li>
+                <li><a href="{{ url_for('placement_page') }}">Placement Training</a></li>
+                <li><a href="{{ url_for('value_added_page') }}">Value Added Courses</a></li>
+                <li><a href="{{ url_for('social_awareness_page') }}">Social Awareness</a></li>
+                <li><a href="{{ url_for('resume_page') }}" class="active">Resume Creation</a></li>
+                <li><a href="{{ url_for('problem_solving_page') }}">Problem Solving</a></li>
+                <li><a href="{{ url_for('paper_workshop_page') }}">Paper & Workshop Skills</a></li>
+            </ul>
+        </nav>
+
+        <section id="service-hero" class="resume-hero"> <div class="hero-content">
+            <h2>Create a Winning Resume</h2>
+            <p>Build a resume that effectively showcases your skills and experiences to employers.</p>
+        </div> </section>
+
+        <main>
+            <section id="resume-creation-content">
+                <h2>Resume Building Resources</h2>
+                <p>Access guides, templates, and tips to create a professional and impactful resume.</p>
+                </section>
+
+            <section class="practice-links">
+                <h3>Resume Tools</h3>
+                <ul>
+                    <li><a href="https://resume.io/resume-templates">Resume.io (AI tool to create resumes)</a></li>
+                    <li><a href="https://www.resumebuilder.com/">ResumeBuilder (AI tool to create resumes)</a></li>
+                    <li><a href="https://www.canva.com/create/resumes/">Canva - Free Online Resume Builder</a></li>
+                    <li><a href="https://zety.com/">Zety - Professional Resume & Cover Letter Tools</a></li>
+                    <li><a href="https://resumegenius.com/">Resume Genius - Free Online Resume Builder</a></li>
+                    <li><a href="https://novoresume.com/">Novoresume - Creative Resume Builder</a></li>
+                    <li><a href="https://www.resume.com/">Resume.com - Free Resume Builder</a></li>
+                    <li><a href="https://zety.com/lp/cv-maker-in?utm_source=google&utm_medium=sem&utm_campaign=21896467088&utm_term=fresher%20resume%20format&network=g&device=c&adposition=&adgroupid=170736946456&placement=&utm_source=google&utm_medium=sem&utm_campaign=21896467088&utm_term=fresher%20resume%20format&network=g&device=c&adposition=&adgroupid=170736946456&placement=&gad_source=1&gclid=Cj0KCQjw4cS-BhDGARIsABg4_J0f6F8Ld_JY4q7JsAbs9-QmBHjhuBFA0coX1saWz_EuzXVhKssGJSMaAkN1EALw_wcB">Zety - CV Maker</a></li>
+                    <li><a href="https://www.naukri.com/campus/resume-maker">Naukri - Resume Maker</a></li>
+                    <li><a href="https://zety.com/in/blog/resume-for-freshers">Zety - Resume Guide for Freshers</a></li>
+
+                </ul>
+            </section>
+
+            <section id="resume-chat-section">  <h2>Resume Creation Chatbot</h2>
+                <div class="chat-container" id="resume-chat-container">  <div class="language-selector">
+                        <label for="resume-language-select">Language:</label>
+                        <select id="resume-language-select" class="language-select" onchange="setLanguage('resume', this.value)">
+                            <option value="en" selected>English</option>
+                            <option value="ta">Tamil</option>
+                            <option value="hin">Hindi</option>
+                            <option value="mal">Malayalam</option>
+                            <option value="tel">Telugu</option>
+                        </select>
+                    </div>
+                    <div class="chat-history" id="resume-chat-history">
+                        <div class="bot-message">
+                            <p>Hello! I am Edubot, your Resume Creation assistant. Let's build you a great resume!</p>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="resume-user-input" placeholder="Type your question here">
+                        <button id="resume-send-button" onclick="sendMessage('resume')"><i class="fas fa-paper-plane"></i> Send</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Edubot. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

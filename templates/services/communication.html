@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Skills - Edubot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-comments"></i> Communication Skills</h1>
+                <p id="tagline">Enhance your communication abilities with Edubot.</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('communication_page') }}" class="active">Communication Skills</a></li>
+                <li><a href="{{ url_for('placement_page') }}">Placement Training</a></li>
+                <li><a href="{{ url_for('value_added_page') }}">Value Added Courses</a></li>
+                <li><a href="{{ url_for('social_awareness_page') }}">Social Awareness</a></li>
+                <li><a href="{{ url_for('resume_page') }}">Resume Creation</a></li>
+                <li><a href="{{ url_for('problem_solving_page') }}">Problem Solving</a></li>
+                <li><a href="{{ url_for('paper_workshop_page') }}">Paper & Workshop Skills</a></li>
+            </ul>
+        </nav>
+
+        <section id="service-hero" class="communication-hero"> <div class="hero-content">
+            <h2>Master Communication Skills</h2>
+            <p>Unlock your potential in verbal and written communication. Practice, learn, and grow with Edubot.</p>
+        </div> </section>
+
+        <main>
+            <section id="communication-skills-content">
+                <h2>About Communication Skills</h2>
+                <p>This section will provide resources and information about improving your communication skills...</p>
+                </section>
+
+            <section class="practice-links">
+                <h3>Practice Resources</h3>
+                <ul>
+                    <li><a href="https://www.coursera.org/learn/wharton-communication-skills">Improving Communication Skills - Coursera</a></li>
+                    <li><a href="https://www.coursera.org/courses?query=communication+skills">Business English Communication Skills - Coursera</a></li>
+                    <li><a href="https://professional.dce.harvard.edu/blog/8-ways-you-can-improve-your-communication-skills/">8 Ways You Can Improve Your Communication Skills</a></li>
+                    <li><a href="https://www.udemy.com/topic/communication-skills/free/">Top Free Communication Skills Courses on Udemy</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=HiOOfClEaYE">Master Spontaneous Speaking video</a></li>
+                    <li><a href="https://www.open.edu/openlearn/free-courses">OpenLearn - Free Courses by The Open University</a></li>
+                    <li><a href="https://www.futurelearn.com/courses">FutureLearn - Free Online Courses</a></li>
+                    <li><a href="https://www.edraak.org/">Edraak - Free Online Courses in Arabic</a></li>
+                    <li><a href="https://www.learnmyway.com/">Learn My Way - Free Digital Skills Courses</a></li>
+                </ul>
+            </section>
+
+            <section id="communication-chat-section">  <h2>Communication Skills Chatbot</h2>
+                <div class="chat-container" id="communication-chat-container">  <div class="language-selector">
+                        <label for="communication-language-select">Language:</label>
+                        <select id="communication-language-select" class="language-select" onchange="setLanguage('communication', this.value)">
+                            <option value="en" selected>English</option>
+                            <option value="ta">Tamil</option>
+                            <option value="hin">Hindi</option>
+                            <option value="mal">Malayalam</option>
+                            <option value="tel">Telugu</option>
+                        </select>
+                    </div>
+                    <div class="chat-history" id="communication-chat-history">
+                        <div class="bot-message">
+                            <p>Hello! I am Edubot, your Communication Skills assistant. How can I help you improve your communication today?</p>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="communication-user-input" placeholder="Type your question here">
+                        <button id="communication-send-button" onclick="sendMessage('communication')"><i class="fas fa-paper-plane"></i> Send</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 LEARNMATE. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

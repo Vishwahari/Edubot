@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Training - Edubot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-briefcase"></i> Placement Training</h1>
+                <p id="tagline">Get placement ready with Edubot's training modules.</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('communication_page') }}">Communication Skills</a></li>
+                <li><a href="{{ url_for('placement_page') }}" class="active">Placement Training</a></li>
+                <li><a href="{{ url_for('value_added_page') }}">Value Added Courses</a></li>
+                <li><a href="{{ url_for('social_awareness_page') }}">Social Awareness</a></li>
+                <li><a href="{{ url_for('resume_page') }}">Resume Creation</a></li>
+                <li><a href="{{ url_for('problem_solving_page') }}">Problem Solving</a></li>
+                <li><a href="{{ url_for('paper_workshop_page') }}">Paper & Workshop Skills</a></li>
+            </ul>
+        </nav>
+
+        <section id="service-hero" class="placement-hero"> <div class="hero-content">
+            <h2>Ace Your Placements</h2>
+            <p>Prepare for campus placements with comprehensive training and resources from Edubot.</p>
+        </div> </section>
+
+        <main>
+            <section id="placement-training-content">
+                <h2>Placement Training Modules</h2>
+                <p>Explore our modules designed to prepare you for every stage of the placement process, from aptitude tests to final interviews.</p>
+                </section>
+
+            <section class="practice-links">
+                <h3>Practice Resources</h3>
+                <ul>
+                    <li><a href="https://talentbattle.in/practice-quantitative-aptitude-questions">Top Quantitative Aptitude Practice Q&S</a></li>
+                    <li><a href="https://testbook.com/reasoning/problem-solving-and-reasoning">Problem Solving Reasoning</a></li>
+                    <li><a href="https://www.testdome.com/tests/aptitude-test/259">Aptitude Test - TestDome</a></li>
+                    <li><a href="https://www.indiabix.com/online-test/aptitude-test/">Online Aptitude Test </a></li>
+                    <li><a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a></li>
+                    <li><a href="https://leetcode.com/">Leetcode</a></li>
+                    <li><a href="https://letsintern.in/ ">Letsintern (Internship)</a></li>
+                    <li><a href="https://hellointern.in/internships?keyword=&search_post_type=internships&search_user=&search_category=&search_cities=&search_states=&search_job_type=&search_employment_type=&search_qualification=&search_page=3&search_company=&search_listing_type= ">Hellointern (Internship)</a></li>
+                    <li><a href="https://www.indiabix.com/ ">Indiabix (Placement training guidance website)</a></li>
+                </ul>
+            </section>
+
+            <section id="placement-chat-section">  <h2>Placement Training Chatbot</h2>
+                <div class="chat-container" id="placement-chat-container">  <div class="language-selector">
+                        <label for="placement-language-select">Language:</label>
+                        <select id="placement-language-select" class="language-select" onchange="setLanguage('placement', this.value)">
+                            <option value="en" selected>English</option>
+                            <option value="ta">Tamil</option>
+                            <option value="hin">Hindi</option>
+                            <option value="mal">Malayalam</option>
+                            <option value="tel">Telugu</option>
+                        </select>
+                    </div>
+                    <div class="chat-history" id="placement-chat-history">
+                        <div class="bot-message">
+                            <p>Hello! I am Edubot, your Placement Training assistant. How can I help you prepare for placements today?</p>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="placement-user-input" placeholder="Type your question here">
+                        <button id="placement-send-button" onclick="sendMessage('placement')"><i class="fas fa-paper-plane"></i> Send</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Edubot. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

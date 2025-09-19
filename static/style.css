@@ -1,0 +1,1029 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1f1;
+    color: #333;
+    line-height: 1.7;
+    background-image: url("/static/images/background.gif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+    /* --- Polytechnic Page Specific Icon Styling --- */
+body#polytechnic-page .fas,
+body#polytechnic-page .fa { /* Targeting both fas and fa classes */
+    font-size: 1.5em; /* Adjust the size as needed (e.g., 1.5em, 2em, etc.) */
+    color: white; /* Set icon color to white */
+}
+    /* --- End Polytechnic Page Specific Icon Styling --- */
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 25px;
+}
+
+header {
+    background-color: rgba(34, 49, 63, 0.95);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+    font-size: 2.9em;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+header p#tagline {
+    font-size: 1.2em;
+    color: #e0d7d7;
+    margin-top: 0.4em;
+    font-style: italic;
+}
+
+nav {
+    background: linear-gradient(to right, rgba(52, 73, 94, 0.95), rgba(64, 85, 106, 0.95));
+    padding: 1em 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("/static/images/background.gif"); /* Path to your GIF */
+    background-size: cover; /* Or 'contain', 'auto', adjust as needed */
+    background-repeat: repeat; /* Or 'no-repeat', 'repeat-x', 'repeat-y', depending on GIF */
+    background-attachment: fixed;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1.2em;
+}
+
+nav a {
+    color: rgb(244, 241, 241);
+    text-decoration: none;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-weight: 700;
+    opacity: 0.95;
+    display: inline-block;
+    letter-spacing: 0.6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a:hover {
+    background-color: rgba(250, 248, 248, 0.2);
+    color: #044e8a;
+    opacity: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav a:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+main {
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+section {  /* --- Modified Section Style for Service Pages --- */
+    margin-bottom: 20px;
+    padding: 25px;
+    background-color:  rgba(20, 16, 16, 0.681);
+    opacity: 0.9;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #000204; /* Highlight top border with primary color - ADDED */
+    text-align: center; /* Center align text in sections on service pages - ADDED */
+    align-items: center; /* Center align items in sections on service pages - ADDED */
+}   
+
+section h2, section h3 {
+    color: #edeef2;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+section h3 {
+    font-size: 1.4em;
+    color: #f3eaea;
+}
+
+section p {
+    color: #f4ecec;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+
+/* Hero Section Styling */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(241, 242, 246, 0.7);
+    border-radius: 12px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2.5rem;
+}
+
+#hero h2 {
+    font-size: 2.6em;
+    margin-bottom: 0.6em;
+    color: #03131f;
+    font-weight: 700;
+}
+
+#hero p {
+    font-size: 1.2em;
+    color: #0f0101;
+    opacity: 0.9;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- "Explore Our Services" Section Styling --- */
+#services {
+    background-image: url("/static/images/background.gif"); /* Background Image */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: #f5f3f3;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#services h2.services-heading {
+    color: rgb(7, 7, 7);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 2.4em;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(255,255,255, 0.5);
+    padding-bottom: 0.5rem;
+}
+
+
+/* Services Grid for "Explore Our Services" Section */
+#services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Service Card within "Explore Our Services" */
+#services .service-card {
+    background-color: rgba(250, 249, 249, 0.85);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #3b3939;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#services .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(11, 1, 1, 0.25);
+    background-color: rgba(246, 242, 242, 0.95);
+}
+
+#services .service-card i {
+    font-size: 3em;
+    color: #060b3d;
+    margin-bottom: 0.5em;
+    opacity: 0.9;
+}
+
+#services .service-card h3 {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 0.3em;
+    font-weight: 600;
+}
+
+#services .service-card p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* --- General Chat on Homepage - New Integrated Design --- (No Changes) */
+#general-chat-home {
+    margin-bottom: 2.5rem;
+    padding: 0 25px;
+}
+
+#general-chat-home .service-card.general-chat {
+    background-color: rgba(235, 231, 231, 0.79); /* Keep similar card background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Keep similar card shadow */
+    padding: 20px;
+    border-top: 5px solid #03182f; /* Highlight top border with primary color */
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+}
+
+#general-chat-home .service-card.general-chat i {
+    color: #030316;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    opacity: 0.9;
+}
+
+#general-chat-home .service-card.general-chat h3 {
+    font-size: 1.7em; /* Slightly smaller title */
+    color: #04031c;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+#general-chat-home .service-card.general-chat p {
+    font-size: 1.1em;
+    color: #080101;
+    line-height: 1.5;
+    margin-bottom: 1.5em; /* Add more bottom margin before chat */
+}
+
+#general-chat-home .service-card.general-chat .language-selector {
+    text-align: right; /* Keep language selector right aligned */
+    margin-bottom: 10px;
+    width: 100%; /* Make language selector full width of card */
+}
+
+
+#general-chat-home .service-card.general-chat .chat-container {
+    border: 1px solid #070707; /* Keep chat container border */
+    border-radius: 10px;
+    overflow: hidden;
+    height: 300px; /* Smaller height for compact design */
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(34, 49, 63, 0.95); /* Keep chat container background */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* Inner shadow for depth */
+    width: 100%; /* Make chat container full width of card */
+}
+
+#general-chat-home .service-card.general-chat .chat-history {
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#general-chat-home .service-card.general-chat .chat-input-area {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    background-color:rgba(34, 49, 63, 0.95);
+}
+
+#general-chat-home .service-card.general-chat .chat-input-area #home-user-input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #080808;
+    margin-right: 10px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#general-chat-home .service-card.general-chat .chat-input-area button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5e6164; /* Primary button color */
+    color: rgb(219, 212, 212);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#general-chat-home .service-card.general-chat .chat-input-area button:hover {
+    background-color: #071627;
+}
+
+#general-chat-home .service-card.general-chat .chat-input-area button:active {
+    transform: scale(0.95);
+}
+
+
+/*  Message Bubbles - Keeping a cleaner style (No Changes) */
+.user-message, .bot-message {
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    clear: both;
+    max-width: 75%;
+    font-size: 1em;
+    line-height: 1.5;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.user-message {
+    background-color: #6b6060; /* Light blue for user messages */
+    float: right;
+    text-align: right;
+    color: #333;
+}
+
+.bot-message {
+    background-color: #7d7878; /* Light grey for bot messages */
+    float: left;
+    text-align: left;
+    color: #e9dfdf;
+    border: 1px solid #ddd; /* Light border for bot messages */
+}
+
+
+/* Service Page Hero Section - No changes below this point unless you want to adjust */
+#service-hero {
+    text-align: center;
+    padding: 70px 20px;
+    color: rgb(251, 249, 249);
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+}
+
+.communication-hero { background-color: #818f98; }
+.placement-hero { background-color: #818f98; }
+.value_added-hero { background-color: #818f98; }
+.social_awareness-hero { background-color: #818f98; }
+.resume-hero { background-color: #818f98; }
+.problem_solving-hero { background-color: #818f98; }
+.paper_workshop-hero { background-color: #818f98; }
+
+
+#service-hero h2 {
+    font-size: 3.2em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#service-hero p {
+    font-size: 1.3em;
+    opacity: 0.95;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.practice-links {
+    margin-top: 35px;
+    padding: 20px;
+    background-color: rgba(6, 6, 6, 0.382);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.practice-links h3 {
+    color: #030303;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.practice-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.practice-links li {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+.practice-links a {
+    color: #f9f7f7;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.practice-links a:hover {
+    color: #b5b82a;
+}
+
+
+/* Chatbot Styling (consistent across pages) - No Changes */
+#chat-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #070707;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+#chat-log {
+    padding: 12px;
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-input-area {
+    padding: 12px;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    background-color: #8a8383;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #d2cece;
+    margin-right: 10px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#send-button, #language-select {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#send-button:hover {
+    background-color: #4cae4c;
+}
+
+#send-button:active {
+    transform: scale(0.95);
+}
+
+#language-select {
+    background-color: #f0ad4e;
+    margin-left: 10px;
+    color: #fff;
+    background-color: #6c757d;
+}
+
+#language-select:hover {
+    background-color: #5a6268;
+}
+
+.language-selector {   /*  STYLE FOR LANGUAGE SELECTOR  */
+    margin-top: 12px;
+    text-align: left;
+}
+
+.language-selector label {
+    font-size: 1.2em;
+    color: #f2eeee;
+    margin-right: 4px;
+}
+
+.language-selector select.language-select {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.95em;
+    color: #333;
+    background-color: #efe5e5;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: right 6px;
+    background-position-y: center;
+    background-size: 12px;
+}
+
+
+
+/* Homepage Student Type Selector Styling - No Changes */
+#student-type-selector {
+    background: rgba(61, 59, 59, 0.9);
+    padding: 25px;
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+#student-type-selector h2 {
+    color: #f3f4f5;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.student-type-options {
+    display: inline-flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.student-type-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.1em;
+    color: #fef7f7;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.student-type-options label:hover {
+    color: #080000;
+}
+
+.student-type-options input[type="radio"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ecedf1;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.student-type-options input[type="radio"]:hover {
+    border-color: #eef0f2;
+}
+
+.student-type-options input[type="radio"]:checked {
+    background-color: #af1818;
+    border-color: #a92020;
+}
+
+.student-type-options input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+#student-type-selector p#intro-text {
+    font-size: 1.1em;
+    color: #faf5f5;
+    line-height: 1.7;
+    padding: 0 10%;
+    margin-bottom: 0;
+}
+
+
+footer {
+    text-align: center;
+    /* padding: 0.6em 0;  --- Current padding --- */
+    padding: 0.10em 0;      /* --- Reduced padding (example) --- */
+    /* or even smaller padding: padding: 0.1em 0; */
+    background-color: #120333;
+    color: #eee;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;     /* You can also reduce margin-top if needed, see below */
+    border-radius: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.08);
+    font-size: 0.65em;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For tablets and larger smartphones */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p#tagline {
+        font-size: 1.1em;
+    }
+
+    nav ul li {
+        margin: 0 0.7em;
+    }
+
+    nav a {
+        padding: 0.4em 0.8em;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 12px; /* Slightly more rounded on tablet */
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1.1em;
+    }
+
+    #service-hero {
+        padding: 55px 15px;
+    }
+
+    #service-hero h2 {
+        font-size: 2.6em;
+    }
+
+    #service-hero p {
+        font-size: 1.2em;
+    }
+
+    #services { /* Responsive adjustments for services section */
+        padding-top: 30px;
+        padding-bottom: 20px;
+        border-radius: 12px;
+    }
+
+    #services h2.services-heading { /* Responsive adjustments for services heading */
+        font-size: 2em;
+        margin-bottom: 1.5rem;
+    }
+
+    #services .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+        max-width: 700px;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    #services .service-card {
+        padding: 15px;
+        border-radius: 12px; /* More rounded on tablet */
+        height: auto; /* Auto height on tablet */
+        text-align: center; /* Center text on tablet */
+        align-items: center; /* Center items on tablet */
+    }
+
+    #services .service-card i {
+        font-size: 2.8em;
+        margin-bottom: 0.4em;
+    }
+
+    #services .service-card h3 {
+        font-size: 1.4em;
+    }
+
+    #services .service-card p {
+        font-size: 1em;
+        display: block; /* Always show paragraph on tablet */
+    }
+
+
+    #general-chat-home { /* Adjust general chat padding on tablet */
+        padding: 0 20px;
+    }
+
+    #general-chat-home .service-card.general-chat {
+        max-width: 90%; /* Adjust max-width for general chat on tablet */
+        padding: 15px; /* Reduced padding on tablet */
+    }
+
+    #general-chat-home .service-card.general-chat h3 {
+        font-size: 1.6em; /* Slightly smaller title on tablet */
+    }
+
+    #general-chat-home .service-card.general-chat p {
+        font-size: 1em; /* Slightly smaller paragraph on tablet */
+    }
+
+    #general-chat-home .service-card.general-chat .chat-container {
+        height: 280px; /* Even smaller chat container on tablet */
+        padding: 10px; /* Further reduced padding in chat container */
+    }
+
+     #general-chat-home .service-card.general-chat .chat-input-area #home-user-input {
+        padding: 8px; /* Smaller input padding */
+        font-size: 0.95em; /* Smaller input font size */
+    }
+
+    #general-chat-home .service-card.general-chat .chat-input-area button {
+        padding: 0.5em; /* Smaller button padding */
+    }
+
+
+    #chat-container {
+        height: 360px;
+    }
+
+    #student-type-selector {
+        padding: 20px;
+        margin-bottom: 2rem;
+    }
+
+    #student-type-selector h2 {
+        font-size: 1.6em;
+    }
+
+    .student-type-options {
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .student-type-options label {
+        font-size: 1em;
+    }
+
+    #student-type-selector p#intro-text {
+        font-size: 1em;
+        padding: 0 8%;
+    }
+
+    #services h2.services-heading {
+        font-size: 1.7em; /* Further reduced for tablet */
+    }
+}
+
+/* For smaller smartphones */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header {
+        padding: 0.6em 0;
+        margin-bottom: 1.2rem;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p#tagline {
+        font-size: 0.9em;
+    }
+
+    nav {
+        padding: 0.5em 0;
+        margin-bottom: 0.8rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav a {
+        padding: 0.4em 0.7em;
+        font-size: 0.9em;
+        border-radius: 4px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    section {
+        padding: 18px;
+        margin-bottom: 12px;
+        border-radius: 10px; /* More rounded on phone */
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    section h3 {
+        font-size: 1.3em;
+    }
+
+    section p {
+        font-size: 0.95em;
+    }
+
+    #hero {
+        padding: 35px 15px;
+        margin-bottom: 1.8rem;
+    }
+
+    #hero h2 {
+        font-size: 1.7em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    #service-hero {
+        padding: 45px 10px;
+        margin-bottom: 1.8rem;
+    }
+
+    #service-hero h2 {
+        font-size: 2.3em;
+    }
+
+    #service-hero p {
+        font-size: 1.1em;
+    }
+
+    #services { /* Responsive adjustments for services section on phone */
+        padding-top: 25px;
+        padding-bottom: 15px;
+        border-radius: 10px;
+    }
+
+    #services h2.services-heading { /* Responsive adjustments for services heading on phone */
+        font-size: 1.9em;
+        margin-bottom: 1.2rem;
+    }
+
+    #services .services-grid {
+        grid-template-columns: 1fr; /* Single column on phone */
+        max-width: 350px; /* Further reduced max-width on phone */
+        gap: 15px;
+        padding: 10px;
+    }
+
+    #services .service-card {
+        padding: 15px;
+        border-radius: 10px; /* More rounded on phone */
+        height: auto; /* Auto height on phone */
+        text-align: center; /* Center text on phone */
+        align-items: center; /* Center items on phone */
+    }
+
+    #services .service-card i {
+        font-size: 2.5em;
+        margin-bottom: 0.3em;
+    }
+
+    #services .service-card h3 {
+        font-size: 1.3em;
+    }
+
+    #services .service-card p {
+        font-size: 0.95em;
+        display: block; /* Always show paragraph on phone */
+    }
+
+
+    #general-chat-home { /* Adjust general chat padding on phone */
+        padding: 0 15px;
+    }
+
+    #general-chat-home .service-card.general-chat {
+        max-width: 95%; /* Adjust max-width for general chat on phone */
+        padding: 15px; /* Reduced padding on phone */
+    }
+
+    #general-chat-home .service-card.general-chat h3 {
+        font-size: 1.5em; /* Further smaller title on phone */
+    }
+
+    #general-chat-home .service-card.general-chat p {
+        font-size: 0.95em; /* Even smaller paragraph on phone */
+    }
+
+    #general-chat-home .service-card.general-chat .chat-container {
+        height: 240px; /* Even smaller chat container on phone */
+        padding: 8px; /* Further reduced padding in chat container */
+    }
+
+     #general-chat-home .service-card.general-chat .chat-input-area #home-user-input {
+        padding: 6px; /* Even smaller input padding */
+        font-size: 0.9em; /* Even smaller input font size */
+    }
+
+    #general-chat-home .service-card.general-chat .chat-input-area button {
+        padding: 0.4em; /* Even smaller button padding */
+    }
+
+
+    #chat-container {
+        height: 300px;
+    }
+
+    #student-type-selector {
+        padding: 18px;
+        margin-bottom: 1.8rem;
+        border-radius: 10px;
+    }
+
+    #student-type-selector h2 {
+        font-size: 1.5em;
+    }
+
+    .student-type-options {
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .student-type-options label {
+        font-size: 0.95em;
+    }
+
+    #student-type-selector p#intro-text {
+        font-size: 0.95em;
+        padding: 0 6%;
+    }
+
+    #services h2.services-heading {
+        font-size: 1.6em;
+    }
+}

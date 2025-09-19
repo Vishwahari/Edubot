@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Awareness - Edubot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-globe"></i> Social Awareness</h1>
+                <p id="tagline">Understand your social and ethical responsibilities.</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('communication_page') }}">Communication Skills</a></li>
+                <li><a href="{{ url_for('placement_page') }}">Placement Training</a></li>
+                <li><a href="{{ url_for('value_added_page') }}">Value Added Courses</a></li>
+                <li><a href="{{ url_for('social_awareness_page') }}" class="active">Social Awareness</a></li>
+                <li><a href="{{ url_for('resume_page') }}">Resume Creation</a></li>
+                <li><a href="{{ url_for('problem_solving_page') }}">Problem Solving</a></li>
+                <li><a href="{{ url_for('paper_workshop_page') }}">Paper & Workshop Skills</a></li>
+            </ul>
+        </nav>
+
+        <section id="service-hero" class="social_awareness-hero"> <div class="hero-content">
+            <h2>Become Socially Aware and Ethical</h2>
+            <p>Learn about social issues, ethics, and your role in making a positive impact as a professional.</p>
+        </div> </section>
+
+        <main>
+            <section id="social-awareness-content">
+                <h2>Explore Social Awareness Topics</h2>
+                <p>Discover resources and discussions on various social issues, professional ethics, and responsible citizenship.</p>
+                </section>
+
+            <section class="practice-links">
+                <h3>Learn More</h3>
+                <ul>
+                    
+                    <li><a href="https://en.wikipedia.org/wiki/Embedded_system">Embedded Systems - Wikipedia</a></li>
+                    <li><a href="https://github.com/topics/pcb-design?l=html">PCB Design - GitHub Topics</a></li>
+                    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                    <li><a href="https://www.wampserver.com/en/">WampServer</a></li>
+                    <li><a href="https://unity.com/">Unity Real-Time Development Platform</a></li>
+                    <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+                    <li><a href="https://github.com/">GitHub</a></li>
+                    <li><a href="https://www.labcenter.com/">Proteus Design Suite</a></li>
+                    <li><a href="https://www.tinkercad.com/">Tinkercad</a></li>
+                    <li><a href="https://www.ieee.org/">IEEE - Advancing Technology for Humanity</a></li>
+                    <li><a href="https://www.mathworks.com/products/matlab.html">MATLAB - MathWorks</a></li>
+                    <li><a href="https://scholar.google.com/">Google Scholar</a></li>
+                    <li><a href="https://www.autodesk.com/">Autodesk - Software for Design & Manufacturing</a></li>
+                    <li><a href="https://www.arduino.cc/">Arduino</a></li>
+                    <li><a href="https://blynk.io/">Blynk - IoT Platform</a></li>
+                    <li><a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench - Official Site</a></li>
+
+                </ul>
+            </section>
+
+            <section id="social_awareness-chat-section">  <h2>Social Awareness Chatbot</h2>
+                <div class="chat-container" id="social_awareness-chat-container">  <div class="language-selector">
+                        <label for="social_awareness-language-select">Language:</label>
+                        <select id="social_awareness-language-select" class="language-select" onchange="setLanguage('social_awareness', this.value)">
+                            <option value="en" selected>English</option>
+                            <option value="ta">Tamil</option>
+                            <option value="hin">Hindi</option>
+                            <option value="mal">Malayalam</option>
+                            <option value="tel">Telugu</option>
+                        </select>
+                    </div>
+                    <div class="chat-history" id="social_awareness-chat-history">
+                        <div class="bot-message">
+                            <p>Hello! I am Edubot, your Social Awareness guide. Let's discuss social responsibility and ethics.</p>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="social_awareness-user-input" placeholder="Type your question here">
+                        <button id="social_awareness-send-button" onclick="sendMessage('social_awareness')"><i class="fas fa-paper-plane"></i> Send</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Edubot. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
