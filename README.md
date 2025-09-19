@@ -143,13 +143,17 @@ Edubot-main/
 We welcome contributions to enhance EduBot! To contribute:
 
 1. Fork the repository.
+
 2. Create a new branch for your feature or bug fix:
 
    ```bash
    git checkout -b feature/your-feature-name
    ```
+
 3. Make changes and adhere to the project's coding style (PEP 8 for Python).
+
 4. Write and run tests to validate your changes.
+
 5. Submit a pull request with a clear description of your changes.
 
 ## Troubleshooting
@@ -160,7 +164,3 @@ We welcome contributions to enhance EduBot! To contribute:
 ## Contact
 
 For questions or feedback, please open an issue on the GitHub repository or contact the project maintainers.
-
-## License
-
-This project is licensed under the MIT License.
