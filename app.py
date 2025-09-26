@@ -13,7 +13,7 @@ CORS(app)
 
 app.config['SECRET_KEY'] = 'your_secret_key_here'  # Keep a secret key for flash messages (if used)
 
-API_KEY = "AIzaSyD481lOybxTKYwNo44dYz_hTveLzqBMA1U" # Replace with your actual API key
+API_KEY = "AIzaSyC-JlAKf-tj1Oq34Zg23wssj_Or9_5u41Q" # Replace with your actual API key
 genai.configure(api_key=API_KEY)
 
 KNOWLEDGE_BASE_PATH = "knowledge_base"
@@ -1071,4 +1071,5 @@ def chat(service):
         return jsonify({"error": "Chatbot failed to generate response."}), 500
 
 if __name__ == "__main__":
+
     app.run(host="0.0.0.0", debug=True, use_reloader=False)
