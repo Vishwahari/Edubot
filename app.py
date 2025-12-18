@@ -8,12 +8,13 @@ import requests  # For catching network errors
 from requests.exceptions import ConnectionError, Timeout
 from werkzeug.utils import secure_filename
 import markdown2
+import traceback
 app = Flask(__name__)
 CORS(app)
 
-app.config['SECRET_KEY'] = 'your_secret_key_here'  # Keep a secret key for flash messages (if used)
+app.config['SECRET_KEY'] = 'your_secret_key_here'  
 
-API_KEY = "AIzaSyC-JlAKf-tj1Oq34Zg23wssj_Or9_5u41Q" # Replace with your actual API key
+API_KEY = "AIzaSyDQ0n9Kwp5XMwSOvEh_8sB3qEOinHtNL4E" # Replace with your actual API key
 genai.configure(api_key=API_KEY)
 
 KNOWLEDGE_BASE_PATH = "knowledge_base"
@@ -603,14 +604,17 @@ def create_chatbot(language, service_context=None): # Added service_context
         raise ValueError(f"Unsupported language: {language}")
 
     try:
-        bot = genai.GenerativeModel("gemini-2.0-flash").start_chat()
+        bot = genai.GenerativeModel("gemini-3-flash-preview").start_chat()
         bot.send_message(prompt_text) # Initial prompt setup
         return bot
+    except (ConnectionError, Timeout, requests.exceptions.RequestException) as network_error:
+        print(f"Network error during chatbot initialization: {network_error}")
+        return None
     except ResourceExhausted as e:
         print(f"ResourceExhausted Error: {e}")
         return None
     except Exception as e: # Catch any other initialization errors
-        print(f"Error during chatbot creation: {e}")
+        print(f"Error during chatbot creation: {e}\n{traceback.format_exc()}")
         return None
 
 
