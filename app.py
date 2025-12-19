@@ -3,18 +3,25 @@ from flask import Flask, request, jsonify, render_template, url_for, redirect, f
 from flask_cors import CORS
 import google.generativeai as genai
 import os
+from dotenv import load_dotenv
 from google.api_core.exceptions import ResourceExhausted
 import requests  # For catching network errors
 from requests.exceptions import ConnectionError, Timeout
 from werkzeug.utils import secure_filename
 import markdown2
 import traceback
+
+# Load environment variables from .env file
+load_dotenv()
+
 app = Flask(__name__)
 CORS(app)
 
-app.config['SECRET_KEY'] = 'your_secret_key_here'  
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'your_secret_key_here')  # Keep a secret key for flash messages (if used)
 
-API_KEY = "AIzaSyDQ0n9Kwp5XMwSOvEh_8sB3qEOinHtNL4E" # Replace with your actual API key
+API_KEY = os.getenv('GOOGLE_API_KEY')  # Load API key from environment variable
+if not API_KEY:
+    raise ValueError("GOOGLE_API_KEY not found in environment variables. Please check your .env file.")
 genai.configure(api_key=API_KEY)
 
 KNOWLEDGE_BASE_PATH = "knowledge_base"
