@@ -113,8 +113,7 @@ Follow these steps to set up EduBot locally:
 
 ## Access the Live Website
 
-Explore EduBot in action: https://edubot-production-2103.up.railway.app/
-
+Explore EduBot in action: https://edubot-1-h74o.onrender.com/
 ## Project Structure
 
 ```
